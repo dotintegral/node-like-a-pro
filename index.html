@@ -81,9 +81,148 @@
             <p>
               I didn't know that such tools exists... So I haven't search for them.
             </p>
-
         </div>
     </section>
+
+
+
+    <section class="slide myslide">
+        <div>
+            <h2>The tools</h2>
+            <ul>
+              <li>nodemon</li>
+              <li>iron-node</li>
+              <li>nvm</li>
+              <li>pm2</li>
+              <li>http-proxy <span class="gray">(some code, yay!)</span></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2 class="chapter">nodemon</h2>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+            <h2>Creating new project</h2>
+            <ul>
+              <li>Git init, npm install ...</li>
+              <li>Open Terminal Emulator / Console</li>
+              <li>Open IDE</li>
+              <li>Start typing</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <section class="slide myslide">
+        <div>
+            <img src="pictures/nodemon-seq-1.png" class="seq-img"/>
+        </div>
+    </section>
+
+
+
+    <section class="slide myslide">
+        <div>
+            <img src="pictures/nodemon-seq-2.png" class="seq-img"/>
+        </div>
+    </section>
+
+
+
+    <section class="slide myslide">
+        <div>
+            <img src="pictures/nodemon-seq-3.png" class="seq-img"/>
+        </div>
+    </section>
+
+
+
+    <section class="slide myslide">
+        <div>
+            <img src="pictures/nodemon-seq-4.png" class="seq-img"/>
+        </div>
+    </section>
+
+
+
+    <section class="slide myslide">
+        <div>
+            <h2>I had a dream</h2>
+            <div>If only there was a hot reloading module for any node script...</div>
+        </div>
+    </section>
+
+
+
+    <section class="slide myslide">
+        <div>
+            <h2>nodemon</h2>
+            <ul>
+              <li>nodemon works like an alternative node launcher</li>
+              <li>it monitors changes made to directories and automatically restarts your app</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>nodemon usage</h2>
+           <pre><code class="javascript">$ npm install -g nodemon
+
+// $ node myapp.js
+$ nodemon myapp.js
+</code></pre>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>nodemon usage</h2>
+           <pre><code class="javascript">// run with arguments
+$ nodemon myapp.js --port 80
+
+// ignore files or directories, that can change
+$ nodemon --ignore tests/ myapp.js
+
+// watch only specyfic directories
+$ nodemon --watch app/ --watch node_modules/ myapp.js
+</code></pre>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>nodemon usage</h2>
+           <pre><code class="javascript">// run non-node scripts
+$ nodemon --exec "python -v" ./myapp.py
+
+// delay the restarts by 3 seconds
+$ nodemon --delay 3 myapp.js
+</code></pre>
+        </div>
+    </section>
+
 
 
 

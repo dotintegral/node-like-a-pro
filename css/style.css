@@ -136,3 +136,11 @@ code {
   width: 300px;
   margin-bottom: 50px;
 }
+
+.gray {
+  color: #666;
+}
+
+.seq-img {
+  width: 100%;
+}
