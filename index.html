@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WarsawJS Slides: Template</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="themes/warsawjs/styles/ribbon-theme.css">
+    <link rel="stylesheet" href="themes/warsawjs/styles/warsawjs-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/languages/javascript.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script>
+      document.addEventListener('keypress', function (e) {
+        if (e.keyCode === 97) {
+          var style = document.querySelector('.full .background > div').style
+
+          if (!style.background) {
+            style.background = "none"
+          } else {
+            style.background = ""
+          }
+        }
+      })
+    </script>
+</head>
+<body class="list">
+    <header class="caption">
+        <h1>WarsawJS Slides: Template</h1>
+        <p>We talk about JavaScript. Each month in Warsaw, Poland.</p>
+    </header>
+
+    <div class="background">
+        <div></div>
+    </div>
+
+    <section class="slide front-page">
+        <div>
+            <div class="logo">
+                <!-- Logo WarsawJS -->
+                <img src="pictures/logo/logo-light.png">
+            </div>
+            <div class="details">
+                <!-- 1. Avatar -->
+                <img src="pictures/me.jpg" alt="Speaker" style="width: 200px; height: 200px" />
+
+                <!-- 2. Speaker -->
+                <h2>Artur Siery</h2>
+
+                <!-- 3. Presentation title -->
+                <h2><strong>Node Like A Pro<strong></h2>
+
+                <!-- 4. Presentation date -->
+                <h2>2016-06-08</h2>
+
+                <!-- 5. Contact the speaker -->
+                <h2><a href="http://twitter.com/dotintegral">@dotintegral</a></h2>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="slide myslide">
+        <div>
+            <h2>Motivation</h2>
+            <p>
+              I found myself doing all those repetetive actions and facing the
+              same problems with Node for years.
+            </p>
+            <p>
+              Turns out, most of them are easly solved by existing tools.
+            </p>
+            <p>
+              I didn't know that such tools exists... So I haven't search for them.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Test example</h2>
+           <pre><code class="javascript">let state = {value: 1}
+let mathOperators = createMathOperators(state)
+
+mathOperators.add(2)
+
+assertEqual(state.value, 3)
+</code></pre>
+        </div>
+    </section>
+
+
+
+    <section class="slide myslide">
+        <div class="end">
+          <img src="pictures/beer.jpg" class="beer" />
+          <h2>Thanks!</h2>
+        </div>
+    </section>
+
+
+
+    <p class="badge"><a href="https://github.com/warsawjs/slides-template">Fork me on Github</a></p>
+    <p class="badge badge-left"><a href="#">Fullscreen</a></p>
+
+    <div class="progress">
+        <div></div>
+    </div>
+
+    <script src="vendor/gamepad/gamepad.js"></script>
+    <script src="vendor/shower/shower.js"></script>
+    <script src="vendor/shower/shower.gamepad.js"></script>
+    <script src="themes/warsawjs/scripts/fullscreen.js"></script>
+</body>
+</html>
