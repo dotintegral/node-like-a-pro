@@ -91,7 +91,7 @@
             <h2>The tools</h2>
             <ul>
               <li>nodemon</li>
-              <li>iron-node</li>
+              <li>node-inspector & iron-node</li>
               <li>nvm</li>
               <li>pm2</li>
               <li>http-proxy <span class="gray">(some code, yay!)</span></li>
@@ -222,6 +222,121 @@ $ nodemon --delay 3 myapp.js
 </code></pre>
         </div>
     </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2 class="chapter-3">node-inspector <br /> & <br /> iron-node</h2>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+            <h2>How to debug node application?</h2>
+            <ul>
+              <li>console.log anyone?</li>
+              <li>Where are the Chrome's DevTools (or Firefox's, or Edge's...)</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Well... here they are</h2>
+          <div class="center">
+            <img class="node-inspector" src="pictures/node-inspector.png" />
+          </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Simple usage</h2>
+          <pre><code class="javascript">$ npm install -g node-inspector // duh...
+
+$ node-debug myapp.js
+</code></pre>
+          <div>
+            Automatycally launches your browser with the inspector app.
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Cool features</h2>
+            <ul>
+              <li>All of Chrome's DevTools features!</li>
+              <li>Uses WebSockets for communication</li>
+              <li>Remote debugging</li>
+              <li>Live edit of running code with option to save on file system</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Advanced stuff</h2>
+          <pre><code class="javascript">// create web-inspector server
+$ node-inspector
+// use node's native debug protocol to connect
+$ node --debug myapp.js
+
+// save live edit
+$ node-debug --save-live-edit myapp.js
+</code></pre>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>iron-node</h2>
+            <ul>
+              <li>Basically the same... but a bit different</li>
+              <li>It's more of a standalone, desktop debugger</li>
+              <li>Comes with it's own version of node</li>
+              <li>Themable</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>iron-node</h2>
+          <div class="center">
+            <img src="pictures/iron-node.jpg" />
+          </div>
+        </div>
+    </section>
+
+
 
 
 
