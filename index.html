@@ -463,7 +463,6 @@ $ nvm exec 0.12.9 node myapp.js
 
 
 
-
     <section class="slide myslide">
         <div>
           <h2>What can we do?</h2>
@@ -497,6 +496,7 @@ $ nvm exec 0.12.9 node myapp.js
             </ul>
         </div>
     </section>
+
 
 
 
@@ -565,18 +565,101 @@ $ pm2 start myapp.js --max-memory-restart 1024M
 
 
 
+
     <section class="slide myslide">
         <div>
-          <h2>Test example</h2>
-           <pre><code class="javascript">let state = {value: 1}
-let mathOperators = createMathOperators(state)
+          <h2 class="chapter">node-proxy</h2>
+        </div>
+    </section>
 
-mathOperators.add(2)
 
-assertEqual(state.value, 3)
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Multiple applications</h2>
+          <ul>
+            <li>We can develop application</li>
+            <li>We can deploy it to production</li>
+            <li>But what about deploying another app?
+              <ul>
+                <li>Only one port 80!</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>The usual solution</h2>
+          <ul>
+            <li>Run applications on different ports</li>
+            <li>Or maybe use Docker containers</li>
+            <li>Routing?
+              <ul>
+                <li>Apache</li>
+                <li>Nginx</li>
+                <li>...</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>For the pure sake of</h2>
+          <div class="center">
+            <img src="pictures/node-all.jpg" />
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>http-proxy</h2>
+          <ul>
+            <li>Allows to proxy requests</li>
+            <li>Supports both HTTP and HTTPS</li>
+            <li>Intercept errors</li>
+            <li>Great for routing</li>
+          </ul>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>The code</h2>
+          <pre><code class="javascript">var httpProxy = require('http-proxy');
+httpProxy.createServer({
+  hostnameOnly: true,
+  router: {
+    'domain1.com': '127.0.0.1:3001',
+    'domain2.com': '127.0.0.1:3002'
+  }
+}).listen(80);
 </code></pre>
         </div>
     </section>
+
 
 
 
@@ -586,6 +669,7 @@ assertEqual(state.value, 3)
           <h2>Thanks!</h2>
         </div>
     </section>
+
 
 
 
