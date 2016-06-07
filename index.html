@@ -340,6 +340,230 @@ $ node-debug --save-live-edit myapp.js
 
 
 
+    <section class="slide myslide">
+        <div>
+          <h2 class="chapter">nvm</h2>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Backwards compability</h2>
+          <ul>
+            <li>In theory, Node's API is backward compatible... at least most of it</li>
+            <li>What to do when working on project that requires diffrent version of node?
+              <ul>
+                <li>Uninstall</li>
+                <li>Download</li>
+                <li>Install</li>
+              <ul>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>nvm</h2>
+          <div>NVM stands for Node Version Manager</div>
+          <div>Allows for easy version change</div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Global usage</h2>
+          <pre><code class="javascript">// install any version
+$ nvm install 0.12.9
+
+// switch to that version
+$ nvm use 0.12.9
+</code></pre>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Local usage</h2>
+          <pre><code class="javascript">// run your app in different version
+$ nvm run 0.12.9 myapp.js
+
+// run shell command with different node version
+$ nvm exec 0.12.9 node myapp.js
+</code></pre>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Issues</h2>
+          <div>Some other node launcher-like programms (such as nodemon or node-inspector)
+            sometimes don't get along with nvm.</div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2 class="chapter">pm2</h2>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Lets release our app to production</h2>
+          <div>Alright, our app is ready to be deployed on production enviroment. </div>
+          <div>We run it, everything is working.</div>
+          <div>After a few hours...</div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>crash!</h2>
+          <div class="center">
+            <img src="pictures/node-crash.jpg" />
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>What can we do?</h2>
+            <ul>
+              <li>Restart the app!</li>
+              <li>Debug</li>
+              <li>Deploy hotfix</li>
+              <li>Test more</li>
+              <li>Add more try and catch statements</li>
+              <li>Hire an QA</li>
+              <li>...</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>... or use PM2</h2>
+            <ul>
+              <li>PM2 is node process manager</li>
+              <li>Will automatically restart any application that crashed</li>
+              <li>Can launch multiple instances of a single app and seamlesly route the
+                traffic (app needs to be stateless)</li>
+              <li>Can restart instance when exceeds given memory limit</li>
+              <li>Can log STDOUT and STDERR to files</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Usage</h2>
+          <pre><code class="javascript">// run your app
+$ pm2 start myapp.js
+
+// run in 5 instances
+$ pm2 start myapp.js -i 5
+
+// restart after exceeding 1GB
+$ pm2 start myapp.js --max-memory-restart 1024M
+</code></pre>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>See what's going on</h2>
+          <pre><code class="javascript">pm2 list
+</code></pre>
+          <div class="center">
+            <img class="pm2-list" src="pictures/pm2-list.png" />
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>Realtime monitoring</h2>
+          <pre><code class="javascript">pm2 monit
+</code></pre>
+          <div class="center">
+            <img class="pm2-monit" src="pictures/pm2-monit.png" />
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="slide myslide">
+        <div>
+          <h2>More features</h2>
+            <ul>
+              <li>Watch directory and restart on changes (like nodemon)</li>
+              <li>Programmatic API</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
 
     <section class="slide myslide">
         <div>

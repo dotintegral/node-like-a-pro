@@ -165,3 +165,11 @@ code {
 .node-inspector {
   height: 400px;
 }
+
+.pm2-monit {
+  width: 500px;
+}
+
+.pm2-list {
+  width: 650px;
+}
